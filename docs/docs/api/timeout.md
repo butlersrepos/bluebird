@@ -23,7 +23,7 @@ title: .timeout
 ```
 
 
-Returns a promise that will be fulfilled with this promise's fulfillment value or rejection reason. However, if this promise is not fulfilled or rejected within `ms` milliseconds, the returned promise is rejected with a [`TimeoutError`](.) or the `error` as the reason.
+Returns a promise that will be fulfilled with this promise's fulfillment value or rejection reason. However, if this promise is not fulfilled or rejected within `ms` milliseconds, the returned promise is rejected with a [`TimeoutError`](.) or the `error` as the reason. Note: if you have enabled cancellation in your [Promise.config](.) then the promise will be considered [`cancelled`](/cancellation.html) and not rejected.
 
 When using the first signature, you may specify a custom error message with the `message` parameter.
 
